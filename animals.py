@@ -6,6 +6,6 @@ class Animal:
         
 animal = Animal('Kot', 'dog', 5)
 
-print(f'Имя: {self.name}, Вид: {self.species}, Возраст: {self.age}')
+print(f'Имя: {animal.name}, Вид: {animal.species}, Возраст: {animal.age}')
 
 
