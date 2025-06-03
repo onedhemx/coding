@@ -23,5 +23,5 @@ shshsh = Shelter()
 animal = Animal("Мур", "собака", 2)
 shshsh.add_animal(animal)
 
-for animals in shshsh.add_animal:
-    animals.display_info
+for a in shshsh.animals:
+    a.display_info()
