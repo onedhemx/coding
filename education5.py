@@ -5,9 +5,6 @@ class Student:
         
     def display_info(self):
         print(f'Имя: {self.name}, ID: {self.student_id}')
-        
-student = Student('dexter', 123498765095)
-student.display_info()
 
 class Group:
     def __init__(self):
@@ -17,12 +14,18 @@ class Group:
         self.students.append(student)
         
     def show_students(self):
-        if self.student == 0 :
+        if not self.students:
             print('Список пуст')
         else:
-            for student in self.student:
+            for student in self.students:
                 student.display_info()
+
 group = Group()
-group.add_student('Broin Moser')
-group.add_student('Bebra Morgan')
+student1 = Student('dexter', 123498765095)
+student2 = Student('Broin Moser', 425786)
+student3 = Student('Bebra Morgan', 6823890)
+group.add_student(student1)
+group.add_student(student2)
+group.add_student(student3)
+group.show_students()
 print(group.students)
