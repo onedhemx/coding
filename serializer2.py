@@ -1,4 +1,4 @@
-load()
+
 
 class Book:
     def __init__(self, name, author, year):
@@ -24,7 +24,8 @@ class Book:
 class Library:
 
     def __init__(self):
-            books = []
+            self.books = []
+            self.load()
             
     def append_book(self, book):
         self.app_book.append(book)
@@ -42,7 +43,17 @@ class Library:
             book.get_info()
             
     def load(self):
-        pass
+        with open(filename, "r") as f:
+            data = json.load(f)
+        self.books = []
+        for item in data:
+            book = Book.from_dict(item)
+            self.books.append(book)
     
     def save(self):
-        pass
+        data = []
+        
+        for book in self.books:
+            data.append(book.to_dict())
+        with open(filename, "w") as f:
+            json.dump(data, f)
