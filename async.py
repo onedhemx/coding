@@ -2,7 +2,14 @@ import time
 words = [
 'gegege',
 'bebebe',
-'azaza'
+'azaza',
+'pipipi',
+'yayayayya',
+'zxc',
+'qwer',
+'wasd',
+'qwerasddfgzxcvn '
+'end'
 ]
 
 for word in words:
