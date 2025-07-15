@@ -43,3 +43,12 @@ router.connect("PC1", PC1)
 router.connect("PC2", PC2)
 router.connect("PC3", PC3)
 router.connect("PC4", PC4)
+
+PC1.send("PC3", "Привет от PC1!")
+
+PC3.send("PC1", "Ответ от PC3!")
+
+PC2.send("PC4", "PC2 здесь.")
+
+PC4.send("PC2", "Принято!")
+        
