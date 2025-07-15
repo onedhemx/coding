@@ -28,4 +28,18 @@ class Computer:
 
     def receive(self, packet):
         print(f"{self.name} получил сообщение от {packet.src}: {packet.data}")
-        
+
+
+
+
+router = Router()
+
+PC1 = Computer("PC1", router)
+PC2 = Computer("PC2", router)
+PC3 = Computer("PC3", router)
+PC4 = Computer("PC4", router)
+
+router.connect("PC1", PC1)
+router.connect("PC2", PC2)
+router.connect("PC3", PC3)
+router.connect("PC4", PC4)
