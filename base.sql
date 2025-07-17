@@ -33,3 +33,9 @@ INSERT INTO publishers(name) VALUES ("Эксмо");
 INSERT INTO publishers(name) VALUES ("Азбука-Аттикус");
 
 SELECT * FROM publishers;
+
+
+INSERT INTO books(title, author_id, publisher_id, year)  VALUES ('Гамлет', 1, 1, 1603);
+INSERT INTO books(title, author_id, publisher_id, year)  VALUES ('Большие надежды', 1, 1, 1861);
+
+SELECT * FROM books;
