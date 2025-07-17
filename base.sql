@@ -4,5 +4,5 @@ CREATE TABLE authors (
 id INT NOT NULL AUTO_INCREMENT,
 firstname VARCHAR(50) NOT NULL,
 lastname VARCHAR(50) NOT NULL,
-  RIMARY KEY (id)
+  PRIMARY KEY (id)
 );
