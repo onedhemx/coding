@@ -1,15 +1,23 @@
-
--- create
 CREATE TABLE authors (
-id INT NOT NULL AUTO_INCREMENT,
-firstname VARCHAR(50) NOT NULL,
-lastname VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id)
+    id INT NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
 );
 
+CREATE TABLE publishers (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
 
-CREATE TABLE publishers(
-id INT NOT NULL AUTO_INCREMENT,
-name VARCHAR(100) NOT NULL,
-  PRIMARY KEY (id)
+CREATE TABLE books (
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    author_id INT NOT NULL,
+    publisher_id INT NOT NULL,
+    year INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (author_id) REFERENCES authors(id),
+    FOREIGN KEY (publisher_id) REFERENCES publishers(id)
 );
