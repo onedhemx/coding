@@ -21,3 +21,10 @@ CREATE TABLE books (
     FOREIGN KEY (author_id) REFERENCES authors(id),
     FOREIGN KEY (publisher_id) REFERENCES publishers(id)
 );
+
+
+INSERT INTO authors(firstname, lastname) VALUES ("Уильям", "Шекспир");
+INSERT INTO authors(firstname, lastname) VALUES ("Виктор", "Пелевин");
+INSERT INTO authors(firstname, lastname) VALUES ("Чарльз", "Диккенс");
+
+SELECT * FROM authors;
