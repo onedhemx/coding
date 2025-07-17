@@ -65,3 +65,17 @@ SELECT b.title,
 FROM books b
 JOIN authors a ON b.author_id = a.id
 WHERE b.title = 'Гамлет';
+
+
+-- Удаление книг, изданных до 1870 года
+DELETE FROM books
+WHERE year < 1870;
+
+-- Проверка оставшихся книг
+SELECT b.title, 
+       CONCAT(a.firstname, ' ', a.lastname) AS author,
+       p.name AS publisher,
+       b.year
+FROM books b
+JOIN authors a ON b.author_id = a.id
+JOIN publishers p ON b.publisher_id = p.id;
