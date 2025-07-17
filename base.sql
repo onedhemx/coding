@@ -6,3 +6,10 @@ firstname VARCHAR(50) NOT NULL,
 lastname VARCHAR(50) NOT NULL,
   PRIMARY KEY (id)
 );
+
+
+CREATE TABLE publishers(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
