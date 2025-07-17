@@ -28,3 +28,8 @@ INSERT INTO authors(firstname, lastname) VALUES ("Виктор", "Пелевин
 INSERT INTO authors(firstname, lastname) VALUES ("Чарльз", "Диккенс");
 
 SELECT * FROM authors;
+
+INSERT INTO publishers(name) VALUES ("Эксмо");
+INSERT INTO publishers(name) VALUES ("Азбука-Аттикус");
+
+SELECT * FROM publishers;
