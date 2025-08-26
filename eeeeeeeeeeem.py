@@ -59,6 +59,18 @@ for student_id in student_ids:
         )
 
 
-
 conn.commit()
+
+cur.execute("""
+SELECT c.courses_name, COUNT(*) 
+FROM courses c
+JOIN connection con ON c.course_id = con.course_id
+GROUP BY c.courses_name
+""")
+course_counts = cur.fetchall()
+
+print("Количество студентов на каждом курсе:")
+for course_name, count in course_counts:
+    print(f"{course_name}: {count}")
+
 conn.close()
