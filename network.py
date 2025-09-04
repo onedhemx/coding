@@ -43,6 +43,14 @@ class Computer:
     def receive(self, packet):
         print(f"{self.name} ({self.mac}) получил сообщение от {packet.src}: {packet.data}")
 
+    def receive(self, packet):
+        if not packet.src or not packet.data:
+            raise ValueError(f"Некорректный пакет получен на {self.name}: пустое поле src или data")
+        print(f"{self.name} ({self.mac}) получил сообщение от {packet.src}: {packet.data}")
+
+
+
+
 
 # Создаём роутер
 router = Router()
